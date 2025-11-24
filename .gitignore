@@ -1,0 +1,23 @@
+# .gitignore
+
+# 1. 가상환경 폴더 (가장 중요)
+venv/
+env/
+.env
+
+# 2. 파이썬 컴파일 파일
+__pycache__/
+*.pyc
+
+# 3. 데이터베이스 (로컬 DB는 올리지 않는 게 원칙)
+db.sqlite3
+
+# 4. 미디어 파일 (사용자가 업로드한 이미지는 올리지 않음)
+media/
+
+# 5. OS 관련 잡동사니
+.DS_Store
+Thumbs.db
+
+# (선택사항) VS Code 설정
+.vscode/

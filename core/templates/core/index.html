@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>키미노 다이가쿠 - 특성화고 입시 정보 서비스</title>
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f6f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            text-align: center;
+            background: white;
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            max-width: 600px;
+            width: 90%;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+        p {
+            color: #666;
+            margin-bottom: 2.5rem;
+        }
+        .button-group {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        .main-btn {
+            display: block;
+            padding: 1.2rem;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: transform 0.2s, background-color 0.2s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .btn-school {
+            background-color: #4A90E2; /* 파란색 계열 */
+        }
+        .btn-univ {
+            background-color: #50E3C2; /* 민트색 계열 */
+            color: #2c3e50;
+        }
+        .main-btn:hover {
+            transform: translateY(-3px);
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>🏫 키미노 다이가쿠</h1>
+        <p>특성화고 학생들을 위한 맞춤형 입시 정보 서비스</p>
+
+        <div class="button-group">
+            <a href="/highschool-search" class="main-btn btn-school">
+                🔍 내 학교 기준학과 조회
+            </a>
+
+            <a href="/university-info" class="main-btn btn-univ">
+                📊 특성화고 특별전형(정시) 입시 정보
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>

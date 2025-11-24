@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내 학교 기준학과 조회 - 너의 대학</title>
+    <style>
+        /* 간단하고 깔끔한 스타일 */
+        body { font-family: 'Noto Sans KR', sans-serif; background-color: #f4f6f8; margin: 0; padding: 20px; }
+        .container { max-width: 1000px; margin: 0 auto; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        
+        h1 { color: #333; text-align: center; margin-bottom: 30px; }
+        
+        /* 검색 컨트롤 영역 */
+        .controls { display: flex; gap: 10px; margin-bottom: 20px; flex-wrap: wrap; }
+        select, input { padding: 12px; border: 1px solid #ddd; border-radius: 8px; font-size: 16px; }
+        select { flex: 1; min-width: 200px; cursor: pointer; }
+        input { flex: 2; min-width: 200px; }
+        
+        /* 테이블 스타일 */
+        .table-container { overflow-x: auto; }
+        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+        th, td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #eee; }
+        th { background-color: #4A90E2; color: white; white-space: nowrap; }
+        tr:hover { background-color: #f9f9f9; }
+        
+        /* 데이터 없음 메시지 */
+        .no-data { text-align: center; color: #888; padding: 40px; }
+        
+        /* 뒤로가기 버튼 */
+        .back-btn { display: inline-block; margin-bottom: 20px; text-decoration: none; color: #666; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <a href="/" class="back-btn">← 메인으로 돌아가기</a>
+        <h1>🏫 내 학교 기준학과 조회</h1>
+
+        <div class="controls">
+            <select id="region-select">
+                <option value="">시도교육청을 선택하세요</option>
+            </select>
+            
+            <input type="text" id="school-search" placeholder="학교명을 검색해보세요 (예: 선린)" disabled>
+        </div>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th width="20%">지역</th>
+                        <th width="30%">학교명</th>
+                        <th width="25%">학과명</th>
+                        <th width="25%">기준학과 (대학지원 시)</th>
+                    </tr>
+                </thead>
+                <tbody id="result-body">
+                    <tr>
+                        <td colspan="4" class="no-data">교육청을 선택하면 목록이 나타납니다.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        // 전역 변수로 데이터 저장 (검색 필터링용)
+        let currentSchoolData = [];
+
+        // 페이지 로드 시 실행
+        document.addEventListener('DOMContentLoaded', () => {
+            fetchRegions();
+        });
+
+        // 1. 시도교육청 목록 가져오기 API 호출
+        async function fetchRegions() {
+            try {
+                const response = await fetch('/api/highschools/regions/');
+                const regions = await response.json();
+                
+                const selectBox = document.getElementById('region-select');
+                regions.forEach(region => {
+                    const option = document.createElement('option');
+                    option.value = region; // 예: 서울특별시교육청
+                    option.textContent = region;
+                    selectBox.appendChild(option);
+                });
+            } catch (error) {
+                console.error('지역 목록 로드 실패:', error);
+                alert('데이터를 불러오는데 실패했습니다.');
+            }
+        }
+
+        // 2. 지역 선택 시 학교 데이터 가져오기
+        document.getElementById('region-select').addEventListener('change', async function() {
+            const selectedRegion = this.value;
+            const searchInput = document.getElementById('school-search');
+            const tbody = document.getElementById('result-body');
+
+            if (!selectedRegion) {
+                searchInput.disabled = true;
+                searchInput.value = '';
+                tbody.innerHTML = '<tr><td colspan="4" class="no-data">교육청을 선택하세요.</td></tr>';
+                return;
+            }
+
+            tbody.innerHTML = '<tr><td colspan="4" class="no-data">데이터를 불러오는 중입니다... ⏳</td></tr>';
+            searchInput.disabled = false;
+
+            try {
+                // API 호출: 해당 지역의 모든 학교/학과 정보 가져오기
+                // URL Encode를 해줘야 한글 깨짐 방지 (예: 서울 -> %EC%84%9C%EC%9A%B8)
+                const url = `/api/highschools/?region=${encodeURIComponent(selectedRegion)}`;
+                const response = await fetch(url);
+                const data = await response.json();
+
+                // 데이터를 가공하기 좋게 펼침 (학교->학과 구조를 행 단위로)
+                currentSchoolData = flattenData(data);
+                
+                // 테이블 그리기
+                renderTable(currentSchoolData);
+
+            } catch (error) {
+                console.error('학교 데이터 로드 실패:', error);
+                tbody.innerHTML = '<tr><td colspan="4" class="no-data">데이터 로드 실패 ❌</td></tr>';
+            }
+        });
+
+        // 3. 데이터 평탄화 (Flatten) 함수
+        // API 구조: [ {school, departments: [{name, stds...}]} ]
+        // 테이블 구조: [ {region, school, dept, stds} ] 로 변환
+        function flattenData(apiData) {
+            let rows = [];
+            apiData.forEach(school => {
+                school.departments.forEach(dept => {
+                    rows.push({
+                        region: school.region,
+                        schoolName: school.name,
+                        deptName: dept.name,
+                        // 기준학과는 리스트이므로 콤마로 연결
+                        stdDepts: dept.standard_departments.join(', ')
+                    });
+                });
+            });
+            return rows;
+        }
+
+        // 4. 테이블 렌더링 함수
+        function renderTable(data) {
+            const tbody = document.getElementById('result-body');
+            tbody.innerHTML = '';
+
+            if (data.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="4" class="no-data">검색 결과가 없습니다.</td></tr>';
+                return;
+            }
+
+            data.forEach(row => {
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td>${row.region.replace('교육청', '')}</td>
+                    <td style="font-weight:bold;">${row.schoolName}</td>
+                    <td>${row.deptName}</td>
+                    <td style="color: #4A90E2;">${row.stdDepts || '-'}</td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+
+        // 5. 학교명 검색 필터링 (키 입력 시 바로 반응)
+        document.getElementById('school-search').addEventListener('keyup', function() {
+            const keyword = this.value.toLowerCase(); // 대소문자 무시
+
+            // 저장해둔 데이터에서 학교명에 검색어가 포함된 것만 필터링
+            const filteredData = currentSchoolData.filter(item => 
+                item.schoolName.toLowerCase().includes(keyword)
+            );
+
+            renderTable(filteredData);
+        });
+    </script>
+</body>
+</html>
