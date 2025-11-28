@@ -2,6 +2,7 @@ import os
 import django
 import pandas as pd
 import glob
+import unicodedata  # [추가] 유니코드 정규화용
 
 # 1. Django 환경 설정
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Kimi_no_daigaku.settings')
@@ -10,13 +11,58 @@ django.setup()
 from highschools.models import HighSchool, HighSchoolDepartment, StandardDepartment
 
 def clean_region_name(raw_text):
-    """지역명 전처리 (줄바꿈/공백 제거, '교육청' 붙이기)"""
+    """지역명 전처리"""
     if pd.isna(raw_text) or raw_text == '':
         return None
-    text = str(raw_text).replace('\n', '').replace(' ', '').strip()
+    # 유니코드 정규화 (NFC)
+    text = unicodedata.normalize('NFC', str(raw_text))
+    text = text.replace('\n', '').replace(' ', '').strip()
     if not text.endswith('교육청'):
         text += '교육청'
     return text
+
+def clean_standard_name(name):
+    """
+    [최종 수정] 기준학과명 강력 전처리
+    1. 유니코드 정규화 (NFC)
+    2. 모든 공백 제거 (특수 공백 포함)
+    3. 모든 종류의 점(·) 통일
+    """
+    if not name:
+        return None
+    
+    # 1. 문자열 변환 및 유니코드 정규화 (자모 분리 현상 해결)
+    name = str(name)
+    name = unicodedata.normalize('NFC', name)
+    
+    # 2. 모든 종류의 공백 제거 (일반 공백 + 특수 공백 \xa0 등)
+    name = "".join(name.split())
+    
+    # 3. 쓰레기 데이터 필터링
+    if name in ['-', 'ￚ', '–', '.', '', 'nan']:
+        return None
+        
+    # 4. 모든 종류의 점을 표준 가운데 점(·)으로 치환
+    # U+00B7(·), U+318D(ㆍ), U+FF65(･), U+2022(•), U+22C5(⋅)
+    name = name.replace('･', '·').replace('•', '·').replace('ㆍ', '·').replace('.', '·').replace('⋅', '·')
+    
+    # 5. 매핑 테이블 (오타 및 관용적 표현 통일)
+    mapping = {
+        '경영사무과': '경영·사무과',
+        '재무회계과': '재무·회계과',
+        '방송통신과': '방송·통신과',
+        '조리식음료과': '조리·식음료과',
+        '관광레저과': '관광·레저과',
+        '인쇄출판과': '인쇄·출판과',
+        '건축촌목과': '건축·토목과',
+        '조리･식음료과': '조리·식음료과', # 특수 점 케이스 명시
+        '경영･사무과': '경영·사무과',
+    }
+    
+    if name in mapping:
+        name = mapping[name]
+        
+    return name
 
 def run():
     xlsx_files = glob.glob('data/*.xlsx')
@@ -28,11 +74,12 @@ def run():
     print(f"📂 파일 로드 중: {target_file}")
 
     try:
-        # header=4: 5번째 줄을 헤더로 인식
         all_sheets = pd.read_excel(target_file, sheet_name=None, header=4)
     except Exception as e:
         print(f"❌ 엑셀 읽기 실패: {e}")
         return
+    
+    collected_std_depts = set()
 
     print(f"총 {len(all_sheets)}개의 시트를 처리합니다.")
 
@@ -40,21 +87,16 @@ def run():
         if '개요' in sheet_name:
             continue
             
-        # 컬럼명 앞뒤 공백 제거
+        # 컬럼명 공백 제거
         df.columns = [str(c).strip() for c in df.columns]
 
-        # 필수 컬럼 확인
         if '학교명' not in df.columns or '학과명' not in df.columns:
             continue
 
-        # [핵심 수정 1] 셀 병합 문제 해결: 위쪽 데이터로 빈 칸 채우기 (Forward Fill)
-        # 학교명과 시도구분 컬럼의 NaN 값을 바로 위 행의 값으로 채웁니다.
         df['학교명'] = df['학교명'].ffill()
         if '시 · 도 구분' in df.columns:
             df['시 · 도 구분'] = df['시 · 도 구분'].ffill()
 
-        # [핵심 수정 2] 기준학과 컬럼 위치 찾기 (인덱스로 접근)
-        # '기준학과'가 포함된 첫 번째 컬럼의 위치(index)를 찾습니다.
         std_col_idx = -1
         for idx, col_name in enumerate(df.columns):
             if '기준학과' in col_name:
@@ -66,62 +108,63 @@ def run():
             dept_name = row.get('학과명')
             raw_region = row.get('시 · 도 구분')
 
-            # ffill을 했으므로 이제 school_name이 비어있으면 진짜 데이터가 없는 행
             if pd.isna(school_name) or pd.isna(dept_name):
                 continue
             
-            # 중간 제목 행(예: '국립', '공립' 등) 스킵
             if "특성화고등학교" in str(school_name) or "설립별" in str(school_name):
                 continue
 
-            # 지역명 정제
             region = clean_region_name(raw_region)
             if not region:
                 region = clean_region_name(sheet_name)
 
-            # 학교 생성
             school, _ = HighSchool.objects.get_or_create(
                 name=school_name,
                 defaults={'region': region}
             )
 
-            # 학과 생성
             department, _ = HighSchoolDepartment.objects.get_or_create(
                 school=school,
                 name=dept_name
             )
 
-            # [핵심 수정 3] 기준학과 2개 열 모두 확인
             if std_col_idx != -1:
-                # 기준학과 1 (원래 찾은 컬럼)
                 val1 = row.iloc[std_col_idx]
-                # 기준학과 2 (바로 오른쪽 옆 컬럼)
-                # 인덱스 범위를 벗어나지 않는지 확인
                 val2 = row.iloc[std_col_idx + 1] if (std_col_idx + 1) < len(df.columns) else None
 
-                # 처리할 값 리스트
                 raw_stds = [val1, val2]
 
                 for raw_val in raw_stds:
                     if pd.isna(raw_val):
                         continue
-                        
-                    val_str = str(raw_val).strip()
+                    
+                    # 1차 변환 (unicodedata 정규화 적용)
+                    val_str = unicodedata.normalize('NFC', str(raw_val)).strip()
                     if val_str == '':
                         continue
                     
-                    # 혹시 모를 콤마/줄바꿈 분리 (대부분은 이제 1개씩 들어올 것임)
                     names = val_str.replace('\n', ',').split(',')
+                    
                     for name in names:
-                        name = name.strip()
-                        if not name:
+                        clean_name = clean_standard_name(name)
+                        
+                        if not clean_name:
                             continue
                         
-                        # 기준학과 DB 연결
-                        std_obj, _ = StandardDepartment.objects.get_or_create(name=name)
+                        std_obj, _ = StandardDepartment.objects.get_or_create(name=clean_name)
                         department.standard_departments.add(std_obj)
+                        
+                        collected_std_depts.add(clean_name)
 
-    print("✅ 데이터 입력 완료! 이제 빠진 학과와 기준학과가 모두 들어갔습니다. 🎉")
+    print("\n" + "="*60)
+    print("🎉 데이터 정제 완료!")
+    print(f"📊 총 {len(collected_std_depts)}종류의 기준학과로 통합되었습니다.")
+    print("="*60)
+    
+    sorted_depts = sorted(list(collected_std_depts))
+    for i, name in enumerate(sorted_depts, 1):
+        print(f"{i}. {name}")
+    print("="*60)
 
 if __name__ == '__main__':
     run()

@@ -13,7 +13,7 @@ __pycache__/
 db.sqlite3
 
 # 4. 미디어 파일 (사용자가 업로드한 이미지는 올리지 않음)
-media/
+#media/
 
 # 5. OS 관련 잡동사니
 .DS_Store
