@@ -69,7 +69,7 @@
     <script>
         // --- Mock Data (API 응답 시뮬레이션) ---
         // 친구분이 Django REST API를 완성하면, 이 mockData 대신 fetch()를 사용해 실제 데이터를 받아오면 됩니다.
-        const mockData = [
+                const mockData = [
             {
                 "id": 1,
                 "university": "서울대학교",
@@ -172,24 +172,43 @@
 
         // --- 함수 정의 ---
 
-        // 1. 검색 처리 함수
-        function handleSearch() {
-            const univQuery = universityInput.value.trim().toLowerCase();
-            const deptQuery = departmentInput.value.trim().toLowerCase();
+        // 1. 검색 처리 함수 (API 호출 방식으로 변경)
+        async function handleSearch() {
+            const univQuery = universityInput.value.trim();
+            const deptQuery = departmentInput.value.trim();
+            let allData = [];
 
-            // 실제 API 호출로 대체할 부분
-            // const response = await fetch(`/api/search?univ=${univQuery}&dept=${deptQuery}`);
-            // const allData = await response.json();
-            const allData = mockData; // 지금은 mockData 사용
+            // TODO: 친구가 만든 API 엔드포인트 URL로 교체해야 합니다. (예: '/api/departments/')
+            // 이 경로는 친구분이 Django의 urls.py에서 설정할 API 주소입니다.
+            const API_ENDPOINT = '/api/departments/'; 
+            
+            // 쿼리 스트링으로 검색어를 전달합니다.
+            const url = `${API_ENDPOINT}?university=${encodeURIComponent(univQuery)}&department=${encodeURIComponent(deptQuery)}`;
 
-            const filteredData = allData.filter(item => {
-                const univMatch = item.university.toLowerCase().includes(univQuery);
-                const deptMatch = item.department.toLowerCase().includes(deptQuery);
-                return univMatch && deptMatch;
-            });
+            try {
+                // 실제 API 호출 부분 (데이터를 가져올 때까지 기다립니다)
+                const response = await fetch(url);
 
-            displayResults(filteredData);
-            updateChart(filteredData);
+                if (!response.ok) {
+                    // HTTP 상태 코드가 200 (OK)이 아니면 에러를 발생시킵니다.
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+
+                // 응답을 JSON 형식으로 변환합니다.
+                allData = await response.json();
+                
+            } catch (error) {
+                console.error("API 호출 중 오류 발생. 임시 Mock Data를 사용합니다:", error);
+                // API 서버 연결 실패 시, mockData에서 검색어에 맞는 데이터를 필터링하여 사용합니다.
+                allData = mockData.filter(item => {
+                    const univMatch = item.university.includes(univQuery);
+                    const deptMatch = item.department.includes(deptQuery);
+                    return univMatch && deptMatch;
+                });
+            }
+
+            displayResults(allData);
+            updateChart(allData);
         }
 
         // 2. 검색 결과 표시 함수
@@ -253,7 +272,7 @@
             });
         }
 
-        // 3. 차트 업데이트 함수 (UX/UI 및 데이터 시각화 담당)
+        // 3. 차트 업데이트 함수 (데이터 시각화 담당)
         function updateChart(data) {
             if (admissionChart) {
                 admissionChart.destroy(); // 이전 차트 파괴
@@ -264,6 +283,7 @@
             // 최근 2개년치 데이터 (2024, 2023)
             const percentileData2024 = data.map(item => {
                 const result2024 = item.results.find(r => r.year === 2024);
+                // 국어, 수학, 탐구 백분위의 평균 계산
                 return result2024 ? (result2024.korean_percentile + result2024.math_percentile + result2024.inquiry_percentile) / 3 : null;
             });
             const percentileData2023 = data.map(item => {
@@ -310,8 +330,9 @@
                     },
                     scales: {
                         y: {
-                            beginAtZero: false, // 0부터 시작 안 함 (데이터가 90~100 사이이므로)
-                            min: Math.min(...percentileData2023.filter(v => v), ...percentileData2024.filter(v => v)) - 2, // 최소값보다 2 낮게
+                            beginAtZero: false, // 0부터 시작 안 함 (데이터가 90~100 사이일 경우)
+                            // 차트 y축의 최소값을 데이터 최소값보다 2 낮게 설정하여 차트가 더 잘 보이도록 조정
+                            min: Math.min(...percentileData2023.filter(v => v), ...percentileData2024.filter(v => v)) - 2, 
                             max: 100, // 최대값 100
                             title: {
                                 display: true,
@@ -324,10 +345,8 @@
         }
 
         // --- 초기 로드 ---
-        // 페이지 로드 시 전체 데이터를 한 번 보여줍니다.
-        displayResults(mockData);
-        updateChart(mockData);
-
+        // 페이지 로드 시 검색 함수를 실행하여 초기 화면에 데이터를 표시합니다.
+        handleSearch();
     </script>
 
 </body>

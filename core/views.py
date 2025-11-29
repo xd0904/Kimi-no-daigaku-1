@@ -5,3 +5,6 @@ def index(request):
 
 def highschool_search(request):
     return render(request, 'core/highschool_search.html')
+
+def edurank_search(request):
+   return render(request, 'core/edurank_search.html')
