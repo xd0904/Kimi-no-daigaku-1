@@ -1,0 +1,1425 @@
+[
+{
+    "model": "universities.university",
+    "pk": 1,
+    "fields": {
+        "name": "경희대학교",
+        "logo_image": "university_logos/스크린샷_2025-11-29_100525.png"
+    }
+},
+{
+    "model": "universities.university",
+    "pk": 2,
+    "fields": {
+        "name": "동국대학교",
+        "logo_image": "university_logos/symbol_02.png"
+    }
+},
+{
+    "model": "universities.university",
+    "pk": 3,
+    "fields": {
+        "name": "서강대학교",
+        "logo_image": ""
+    }
+},
+{
+    "model": "universities.university",
+    "pk": 4,
+    "fields": {
+        "name": "세종대학교",
+        "logo_image": ""
+    }
+},
+{
+    "model": "universities.universitydivision",
+    "pk": 1,
+    "fields": {
+        "university": 1,
+        "name": "사회계열",
+        "korean_score": 30.0,
+        "math_score": 30.0,
+        "inquiry_score": 25.0,
+        "english_method": "ADD",
+        "english_grade_points": {
+            "1": 200,
+            "2": 196,
+            "3": 188,
+            "4": 160,
+            "5": 120,
+            "6": 80,
+            "7": 46,
+            "8": 22,
+            "9": 0
+        },
+        "naesin_reflection_score": 0.0,
+        "eligible_standard_departments": [
+            1,
+            2,
+            4,
+            21,
+            22,
+            23,
+            26,
+            27,
+            31,
+            34,
+            37,
+            45
+        ]
+    }
+},
+{
+    "model": "universities.universitydivision",
+    "pk": 2,
+    "fields": {
+        "university": 1,
+        "name": "자연계열",
+        "korean_score": 20.0,
+        "math_score": 35.0,
+        "inquiry_score": 30.0,
+        "english_method": "ADD",
+        "english_grade_points": {
+            "1": 200,
+            "2": 196,
+            "3": 188,
+            "4": 160,
+            "5": 120,
+            "6": 80,
+            "7": 46,
+            "8": 22,
+            "9": 0
+        },
+        "naesin_reflection_score": 0.0,
+        "eligible_standard_departments": [
+            3,
+            5,
+            6,
+            8,
+            9,
+            12,
+            14,
+            15,
+            16,
+            17,
+            28,
+            30,
+            33,
+            36,
+            41
+        ]
+    }
+},
+{
+    "model": "universities.universitydivision",
+    "pk": 3,
+    "fields": {
+        "university": 2,
+        "name": "인문계열",
+        "korean_score": 35.0,
+        "math_score": 25.0,
+        "inquiry_score": 25.0,
+        "english_method": "ADD",
+        "english_grade_points": {
+            "1": 200,
+            "2": 199,
+            "3": 197,
+            "4": 190,
+            "5": 180,
+            "6": 140,
+            "7": 90,
+            "8": 20,
+            "9": 0
+        },
+        "naesin_reflection_score": 0.0,
+        "eligible_standard_departments": [
+            1,
+            2,
+            3,
+            26,
+            27,
+            31,
+            33
+        ]
+    }
+},
+{
+    "model": "universities.universitydivision",
+    "pk": 4,
+    "fields": {
+        "university": 2,
+        "name": "자연계열",
+        "korean_score": 25.0,
+        "math_score": 35.0,
+        "inquiry_score": 25.0,
+        "english_method": "ADD",
+        "english_grade_points": {
+            "1": 200,
+            "2": 199,
+            "3": 197,
+            "4": 190,
+            "5": 180,
+            "6": 140,
+            "7": 90,
+            "8": 20,
+            "9": 0
+        },
+        "naesin_reflection_score": 0.0,
+        "eligible_standard_departments": [
+            3,
+            5,
+            6,
+            8,
+            9,
+            14,
+            15,
+            28,
+            30,
+            33,
+            36,
+            41
+        ]
+    }
+},
+{
+    "model": "universities.universitydivision",
+    "pk": 5,
+    "fields": {
+        "university": 3,
+        "name": "인문계열",
+        "korean_score": 36.7,
+        "math_score": 43.3,
+        "inquiry_score": 20.0,
+        "english_method": "ADD",
+        "english_grade_points": {
+            "1": 100,
+            "2": 99,
+            "3": 98,
+            "4": 97,
+            "5": 96,
+            "6": 95,
+            "7": 94,
+            "8": 93,
+            "9": 92
+        },
+        "naesin_reflection_score": 0.0,
+        "eligible_standard_departments": [
+            1,
+            2,
+            3,
+            4,
+            22,
+            23,
+            26,
+            27,
+            31,
+            33
+        ]
+    }
+},
+{
+    "model": "universities.universitydivision",
+    "pk": 6,
+    "fields": {
+        "university": 3,
+        "name": "자연계열",
+        "korean_score": 36.7,
+        "math_score": 43.3,
+        "inquiry_score": 20.0,
+        "english_method": "ADD",
+        "english_grade_points": {
+            "1": 100,
+            "2": 99,
+            "3": 98,
+            "4": 97,
+            "5": 96,
+            "6": 95,
+            "7": 94,
+            "8": 93,
+            "9": 92
+        },
+        "naesin_reflection_score": 0.0,
+        "eligible_standard_departments": [
+            3,
+            5,
+            6,
+            8,
+            9,
+            12,
+            14,
+            15,
+            16,
+            17,
+            24,
+            25,
+            28,
+            30,
+            33,
+            35,
+            36,
+            39,
+            41
+        ]
+    }
+},
+{
+    "model": "universities.universitydivision",
+    "pk": 7,
+    "fields": {
+        "university": 4,
+        "name": "인문계열",
+        "korean_score": 30.0,
+        "math_score": 30.0,
+        "inquiry_score": 20.0,
+        "english_method": "ADD",
+        "english_grade_points": {
+            "1": 200,
+            "2": 195,
+            "3": 190,
+            "4": 185,
+            "5": 170,
+            "6": 150,
+            "7": 120,
+            "8": 100,
+            "9": 0
+        },
+        "naesin_reflection_score": 0.0,
+        "eligible_standard_departments": [
+            1,
+            2,
+            3,
+            4,
+            7,
+            10,
+            21,
+            22,
+            23,
+            26,
+            27,
+            31,
+            33,
+            34,
+            37,
+            38,
+            45
+        ]
+    }
+},
+{
+    "model": "universities.universitydivision",
+    "pk": 8,
+    "fields": {
+        "university": 4,
+        "name": "자연계열",
+        "korean_score": 20.0,
+        "math_score": 35.0,
+        "inquiry_score": 25.0,
+        "english_method": "ADD",
+        "english_grade_points": {
+            "1": 200,
+            "2": 198,
+            "3": 196,
+            "4": 194,
+            "5": 170,
+            "6": 150,
+            "7": 120,
+            "8": 100,
+            "9": 0
+        },
+        "naesin_reflection_score": 0.0,
+        "eligible_standard_departments": [
+            3,
+            4,
+            5,
+            6,
+            8,
+            9,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            22,
+            24,
+            25,
+            28,
+            29,
+            30,
+            32,
+            33,
+            35,
+            36,
+            37,
+            38,
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            48
+        ]
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 1,
+    "fields": {
+        "division": 1,
+        "name": "정치외교학과",
+        "recruitment_group": "가군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 2,
+    "fields": {
+        "division": 1,
+        "name": "행정학과",
+        "recruitment_group": "가군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 3,
+    "fields": {
+        "division": 1,
+        "name": "사회학과",
+        "recruitment_group": "가군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 4,
+    "fields": {
+        "division": 1,
+        "name": "경제학과",
+        "recruitment_group": "가군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 5,
+    "fields": {
+        "division": 1,
+        "name": "무역학과",
+        "recruitment_group": "가군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 6,
+    "fields": {
+        "division": 1,
+        "name": "미디어학과",
+        "recruitment_group": "가군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 7,
+    "fields": {
+        "division": 1,
+        "name": "경영학과",
+        "recruitment_group": "가군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 8,
+    "fields": {
+        "division": 1,
+        "name": "회계학과",
+        "recruitment_group": "가군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 9,
+    "fields": {
+        "division": 1,
+        "name": "Hospitality경영학과",
+        "recruitment_group": "가군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 10,
+    "fields": {
+        "division": 1,
+        "name": "조리&푸드디자인학과",
+        "recruitment_group": "가군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 11,
+    "fields": {
+        "division": 1,
+        "name": "관광&엔터테인먼트학부",
+        "recruitment_group": "가군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 12,
+    "fields": {
+        "division": 2,
+        "name": "전자공학부 전자공학과",
+        "recruitment_group": "가군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 13,
+    "fields": {
+        "division": 2,
+        "name": "컴퓨터공학부 컴퓨터공학과",
+        "recruitment_group": "가군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 14,
+    "fields": {
+        "division": 2,
+        "name": "소프트웨어융합학과",
+        "recruitment_group": "가군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 15,
+    "fields": {
+        "division": 2,
+        "name": "기계공학부",
+        "recruitment_group": "나군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 16,
+    "fields": {
+        "division": 2,
+        "name": "산업경영공학과",
+        "recruitment_group": "나군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 17,
+    "fields": {
+        "division": 2,
+        "name": "화학공학과",
+        "recruitment_group": "나군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 18,
+    "fields": {
+        "division": 2,
+        "name": "신소재공학과",
+        "recruitment_group": "나군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 19,
+    "fields": {
+        "division": 2,
+        "name": "건축학과(5년제)",
+        "recruitment_group": "나군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 20,
+    "fields": {
+        "division": 3,
+        "name": "국제통상학과",
+        "recruitment_group": "가군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 21,
+    "fields": {
+        "division": 3,
+        "name": "경영학과",
+        "recruitment_group": "나군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 22,
+    "fields": {
+        "division": 3,
+        "name": "경영정보학과",
+        "recruitment_group": "가군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 23,
+    "fields": {
+        "division": 4,
+        "name": "전자전기공학부",
+        "recruitment_group": "가군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 24,
+    "fields": {
+        "division": 4,
+        "name": "컴퓨터&AI학부",
+        "recruitment_group": "나군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 25,
+    "fields": {
+        "division": 5,
+        "name": "경제학과",
+        "recruitment_group": "나군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 26,
+    "fields": {
+        "division": 5,
+        "name": "경영학부",
+        "recruitment_group": "나군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 27,
+    "fields": {
+        "division": 5,
+        "name": "신문방송학과",
+        "recruitment_group": "나군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 28,
+    "fields": {
+        "division": 5,
+        "name": "미디어&엔터테인먼트학과",
+        "recruitment_group": "나군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 29,
+    "fields": {
+        "division": 6,
+        "name": "전자공학과",
+        "recruitment_group": "나군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 30,
+    "fields": {
+        "division": 6,
+        "name": "컴퓨터공학과",
+        "recruitment_group": "나군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 31,
+    "fields": {
+        "division": 6,
+        "name": "화공생명공학과",
+        "recruitment_group": "나군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 32,
+    "fields": {
+        "division": 6,
+        "name": "기계공학과",
+        "recruitment_group": "나군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 33,
+    "fields": {
+        "division": 6,
+        "name": "인공지능학과",
+        "recruitment_group": "나군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.admissionresult",
+    "pk": 1,
+    "fields": {
+        "department": 1,
+        "year": 2025,
+        "recruit_count": 2,
+        "korean_grade": 2.0,
+        "korean_percentile": 91.0,
+        "math_grade": 5.0,
+        "math_percentile": 56.0,
+        "english_grade": 2.0,
+        "inquiry_grade": 2.0,
+        "inquiry_percentile": 91.0
+    }
+},
+{
+    "model": "universities.admissionresult",
+    "pk": 2,
+    "fields": {
+        "department": 2,
+        "year": 2025,
+        "recruit_count": 2,
+        "korean_grade": 2.0,
+        "korean_percentile": 94.0,
+        "math_grade": 4.0,
+        "math_percentile": 68.0,
+        "english_grade": 3.0,
+        "inquiry_grade": 3.0,
+        "inquiry_percentile": 80.5
+    }
+},
+{
+    "model": "universities.admissionresult",
+    "pk": 3,
+    "fields": {
+        "department": 3,
+        "year": 2025,
+        "recruit_count": 2,
+        "korean_grade": 3.0,
+        "korean_percentile": 82.0,
+        "math_grade": 3.0,
+        "math_percentile": 78.0,
+        "english_grade": 2.0,
+        "inquiry_grade": 4.0,
+        "inquiry_percentile": 74.0
+    }
+},
+{
+    "model": "universities.admissionresult",
+    "pk": 4,
+    "fields": {
+        "department": 4,
+        "year": 2025,
+        "recruit_count": 3,
+        "korean_grade": 4.0,
+        "korean_percentile": 67.0,
+        "math_grade": 2.0,
+        "math_percentile": 91.0,
+        "english_grade": 2.5,
+        "inquiry_grade": 3.0,
+        "inquiry_percentile": 84.5
+    }
+},
+{
+    "model": "universities.admissionresult",
+    "pk": 5,
+    "fields": {
+        "department": 5,
+        "year": 2025,
+        "recruit_count": 3,
+        "korean_grade": 4.0,
+        "korean_percentile": 68.5,
+        "math_grade": 4.0,
+        "math_percentile": 76.0,
+        "english_grade": 3.0,
+        "inquiry_grade": 3.0,
+        "inquiry_percentile": 86.5
+    }
+},
+{
+    "model": "universities.admissionresult",
+    "pk": 6,
+    "fields": {
+        "department": 6,
+        "year": 2025,
+        "recruit_count": 3,
+        "korean_grade": 2.0,
+        "korean_percentile": 91.0,
+        "math_grade": 3.0,
+        "math_percentile": 80.5,
+        "english_grade": 2.5,
+        "inquiry_grade": 3.0,
+        "inquiry_percentile": 81.5
+    }
+},
+{
+    "model": "universities.admissionresult",
+    "pk": 7,
+    "fields": {
+        "department": 7,
+        "year": 2025,
+        "recruit_count": 6,
+        "korean_grade": 3.0,
+        "korean_percentile": 85.25,
+        "math_grade": 3.0,
+        "math_percentile": 77.5,
+        "english_grade": 2.75,
+        "inquiry_grade": 2.0,
+        "inquiry_percentile": 89.13
+    }
+},
+{
+    "model": "universities.admissionresult",
+    "pk": 8,
+    "fields": {
+        "department": 8,
+        "year": 2025,
+        "recruit_count": 3,
+        "korean_grade": 3.0,
+        "korean_percentile": 82.0,
+        "math_grade": 4.0,
+        "math_percentile": 72.0,
+        "english_grade": 2.0,
+        "inquiry_grade": 2.0,
+        "inquiry_percentile": 91.75
+    }
+},
+{
+    "model": "universities.admissionresult",
+    "pk": 9,
+    "fields": {
+        "department": 9,
+        "year": 2025,
+        "recruit_count": 5,
+        "korean_grade": 3.0,
+        "korean_percentile": 86.5,
+        "math_grade": 4.0,
+        "math_percentile": 75.0,
+        "english_grade": 2.75,
+        "inquiry_grade": 2.0,
+        "inquiry_percentile": 89.75
+    }
+},
+{
+    "model": "universities.admissionresult",
+    "pk": 10,
+    "fields": {
+        "department": 10,
+        "year": 2025,
+        "recruit_count": 3,
+        "korean_grade": 3.0,
+        "korean_percentile": 80.0,
+        "math_grade": 4.0,
+        "math_percentile": 74.0,
+        "english_grade": 3.0,
+        "inquiry_grade": 2.0,
+        "inquiry_percentile": 91.5
+    }
+},
+{
+    "model": "universities.admissionresult",
+    "pk": 11,
+    "fields": {
+        "department": 11,
+        "year": 2025,
+        "recruit_count": 3,
+        "korean_grade": 4.0,
+        "korean_percentile": 75.5,
+        "math_grade": 4.0,
+        "math_percentile": 63.5,
+        "english_grade": 3.5,
+        "inquiry_grade": 3.0,
+        "inquiry_percentile": 80.5
+    }
+},
+{
+    "model": "universities.admissionresult",
+    "pk": 12,
+    "fields": {
+        "department": 12,
+        "year": 2025,
+        "recruit_count": 3,
+        "korean_grade": 4.0,
+        "korean_percentile": 71.5,
+        "math_grade": 2.0,
+        "math_percentile": 94.5,
+        "english_grade": 3.0,
+        "inquiry_grade": 3.0,
+        "inquiry_percentile": 84.0
+    }
+},
+{
+    "model": "universities.admissionresult",
+    "pk": 13,
+    "fields": {
+        "department": 13,
+        "year": 2025,
+        "recruit_count": 3,
+        "korean_grade": 3.0,
+        "korean_percentile": 85.0,
+        "math_grade": 3.0,
+        "math_percentile": 86.5,
+        "english_grade": 1.5,
+        "inquiry_grade": 3.0,
+        "inquiry_percentile": 80.0
+    }
+},
+{
+    "model": "universities.admissionresult",
+    "pk": 14,
+    "fields": {
+        "department": 14,
+        "year": 2025,
+        "recruit_count": 3,
+        "korean_grade": 3.0,
+        "korean_percentile": 81.5,
+        "math_grade": 3.0,
+        "math_percentile": 86.5,
+        "english_grade": 2.5,
+        "inquiry_grade": 3.0,
+        "inquiry_percentile": 82.75
+    }
+},
+{
+    "model": "universities.admissionresult",
+    "pk": 15,
+    "fields": {
+        "department": 15,
+        "year": 2025,
+        "recruit_count": 3,
+        "korean_grade": 3.0,
+        "korean_percentile": 84.0,
+        "math_grade": 4.0,
+        "math_percentile": 70.0,
+        "english_grade": 2.5,
+        "inquiry_grade": 2.0,
+        "inquiry_percentile": 93.5
+    }
+},
+{
+    "model": "universities.admissionresult",
+    "pk": 16,
+    "fields": {
+        "department": 16,
+        "year": 2025,
+        "recruit_count": 2,
+        "korean_grade": 3.0,
+        "korean_percentile": 79.0,
+        "math_grade": 4.0,
+        "math_percentile": 66.0,
+        "english_grade": 3.0,
+        "inquiry_grade": 2.0,
+        "inquiry_percentile": 92.5
+    }
+},
+{
+    "model": "universities.admissionresult",
+    "pk": 17,
+    "fields": {
+        "department": 17,
+        "year": 2025,
+        "recruit_count": 2,
+        "korean_grade": 3.0,
+        "korean_percentile": 77.0,
+        "math_grade": 3.0,
+        "math_percentile": 87.0,
+        "english_grade": 2.0,
+        "inquiry_grade": 2.0,
+        "inquiry_percentile": 93.5
+    }
+},
+{
+    "model": "universities.admissionresult",
+    "pk": 18,
+    "fields": {
+        "department": 18,
+        "year": 2025,
+        "recruit_count": 2,
+        "korean_grade": 3.0,
+        "korean_percentile": 85.0,
+        "math_grade": 4.0,
+        "math_percentile": 74.0,
+        "english_grade": 3.0,
+        "inquiry_grade": 2.0,
+        "inquiry_percentile": 93.0
+    }
+},
+{
+    "model": "universities.admissionresult",
+    "pk": 19,
+    "fields": {
+        "department": 19,
+        "year": 2025,
+        "recruit_count": 3,
+        "korean_grade": 3.0,
+        "korean_percentile": 85.0,
+        "math_grade": 4.0,
+        "math_percentile": 74.0,
+        "english_grade": 2.5,
+        "inquiry_grade": 3.0,
+        "inquiry_percentile": 84.0
+    }
+},
+{
+    "model": "universities.admissionresult",
+    "pk": 20,
+    "fields": {
+        "department": 20,
+        "year": 2025,
+        "recruit_count": 2,
+        "korean_grade": 3.0,
+        "korean_percentile": 87.0,
+        "math_grade": 4.0,
+        "math_percentile": 60.0,
+        "english_grade": 3.5,
+        "inquiry_grade": 2.0,
+        "inquiry_percentile": 91.75
+    }
+},
+{
+    "model": "universities.admissionresult",
+    "pk": 21,
+    "fields": {
+        "department": 21,
+        "year": 2025,
+        "recruit_count": 2,
+        "korean_grade": 3.0,
+        "korean_percentile": 88.0,
+        "math_grade": 4.0,
+        "math_percentile": 72.0,
+        "english_grade": 3.0,
+        "inquiry_grade": 2.0,
+        "inquiry_percentile": 95.25
+    }
+},
+{
+    "model": "universities.admissionresult",
+    "pk": 22,
+    "fields": {
+        "department": 22,
+        "year": 2025,
+        "recruit_count": 2,
+        "korean_grade": 2.0,
+        "korean_percentile": 93.0,
+        "math_grade": 5.0,
+        "math_percentile": 58.0,
+        "english_grade": 3.5,
+        "inquiry_grade": 2.0,
+        "inquiry_percentile": 95.5
+    }
+},
+{
+    "model": "universities.admissionresult",
+    "pk": 23,
+    "fields": {
+        "department": 23,
+        "year": 2025,
+        "recruit_count": 2,
+        "korean_grade": 4.0,
+        "korean_percentile": 73.0,
+        "math_grade": 3.0,
+        "math_percentile": 86.0,
+        "english_grade": 2.5,
+        "inquiry_grade": 3.0,
+        "inquiry_percentile": 86.25
+    }
+},
+{
+    "model": "universities.admissionresult",
+    "pk": 24,
+    "fields": {
+        "department": 24,
+        "year": 2025,
+        "recruit_count": 2,
+        "korean_grade": 3.0,
+        "korean_percentile": 87.0,
+        "math_grade": 3.0,
+        "math_percentile": 80.5,
+        "english_grade": 2.5,
+        "inquiry_grade": 2.0,
+        "inquiry_percentile": 92.5
+    }
+},
+{
+    "model": "universities.admissionresult",
+    "pk": 25,
+    "fields": {
+        "department": 25,
+        "year": 2025,
+        "recruit_count": null,
+        "korean_grade": 2.0,
+        "korean_percentile": 91.0,
+        "math_grade": 3.0,
+        "math_percentile": 78.0,
+        "english_grade": 3.0,
+        "inquiry_grade": 1.0,
+        "inquiry_percentile": 98.0
+    }
+},
+{
+    "model": "universities.admissionresult",
+    "pk": 26,
+    "fields": {
+        "department": 26,
+        "year": 2025,
+        "recruit_count": null,
+        "korean_grade": 2.0,
+        "korean_percentile": 91.0,
+        "math_grade": 3.0,
+        "math_percentile": 78.0,
+        "english_grade": 3.0,
+        "inquiry_grade": 1.0,
+        "inquiry_percentile": 98.0
+    }
+},
+{
+    "model": "universities.admissionresult",
+    "pk": 27,
+    "fields": {
+        "department": 27,
+        "year": 2025,
+        "recruit_count": null,
+        "korean_grade": 2.0,
+        "korean_percentile": 91.0,
+        "math_grade": 3.0,
+        "math_percentile": 78.0,
+        "english_grade": 3.0,
+        "inquiry_grade": 1.0,
+        "inquiry_percentile": 98.0
+    }
+},
+{
+    "model": "universities.admissionresult",
+    "pk": 28,
+    "fields": {
+        "department": 28,
+        "year": 2025,
+        "recruit_count": null,
+        "korean_grade": 2.0,
+        "korean_percentile": 91.0,
+        "math_grade": 3.0,
+        "math_percentile": 78.0,
+        "english_grade": 3.0,
+        "inquiry_grade": 1.0,
+        "inquiry_percentile": 98.0
+    }
+},
+{
+    "model": "universities.admissionresult",
+    "pk": 29,
+    "fields": {
+        "department": 29,
+        "year": 2025,
+        "recruit_count": null,
+        "korean_grade": 2.0,
+        "korean_percentile": 91.0,
+        "math_grade": 2.0,
+        "math_percentile": 89.0,
+        "english_grade": 3.0,
+        "inquiry_grade": 2.0,
+        "inquiry_percentile": 92.0
+    }
+},
+{
+    "model": "universities.admissionresult",
+    "pk": 30,
+    "fields": {
+        "department": 30,
+        "year": 2025,
+        "recruit_count": null,
+        "korean_grade": 2.0,
+        "korean_percentile": 91.0,
+        "math_grade": 2.0,
+        "math_percentile": 89.0,
+        "english_grade": 3.0,
+        "inquiry_grade": 2.0,
+        "inquiry_percentile": 92.0
+    }
+},
+{
+    "model": "universities.admissionresult",
+    "pk": 31,
+    "fields": {
+        "department": 31,
+        "year": 2025,
+        "recruit_count": null,
+        "korean_grade": 91.0,
+        "korean_percentile": 2.0,
+        "math_grade": 2.0,
+        "math_percentile": 89.0,
+        "english_grade": 3.0,
+        "inquiry_grade": 2.0,
+        "inquiry_percentile": 92.0
+    }
+},
+{
+    "model": "universities.admissionresult",
+    "pk": 32,
+    "fields": {
+        "department": 32,
+        "year": 2025,
+        "recruit_count": null,
+        "korean_grade": 2.0,
+        "korean_percentile": 91.0,
+        "math_grade": 2.0,
+        "math_percentile": 89.0,
+        "english_grade": 3.0,
+        "inquiry_grade": 2.0,
+        "inquiry_percentile": 92.0
+    }
+},
+{
+    "model": "universities.admissionresult",
+    "pk": 33,
+    "fields": {
+        "department": 33,
+        "year": 2025,
+        "recruit_count": null,
+        "korean_grade": 2.0,
+        "korean_percentile": 91.0,
+        "math_grade": 2.0,
+        "math_percentile": 89.0,
+        "english_grade": 3.0,
+        "inquiry_grade": 2.0,
+        "inquiry_percentile": 92.0
+    }
+}
+]
