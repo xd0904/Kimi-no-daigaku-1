@@ -1,0 +1,1058 @@
+[
+{
+    "model": "universities.universitydepartment",
+    "pk": 1,
+    "fields": {
+        "division": 1,
+        "name": "정치외교학과",
+        "recruitment_group": "가군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 2,
+    "fields": {
+        "division": 1,
+        "name": "행정학과",
+        "recruitment_group": "가군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 3,
+    "fields": {
+        "division": 1,
+        "name": "사회학과",
+        "recruitment_group": "가군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 4,
+    "fields": {
+        "division": 1,
+        "name": "경제학과",
+        "recruitment_group": "가군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 5,
+    "fields": {
+        "division": 1,
+        "name": "무역학과",
+        "recruitment_group": "가군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 6,
+    "fields": {
+        "division": 1,
+        "name": "미디어학과",
+        "recruitment_group": "가군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 7,
+    "fields": {
+        "division": 1,
+        "name": "경영학과",
+        "recruitment_group": "가군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 8,
+    "fields": {
+        "division": 1,
+        "name": "회계학과",
+        "recruitment_group": "가군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 9,
+    "fields": {
+        "division": 1,
+        "name": "Hospitality경영학과",
+        "recruitment_group": "가군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 10,
+    "fields": {
+        "division": 1,
+        "name": "조리&푸드디자인학과",
+        "recruitment_group": "가군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 11,
+    "fields": {
+        "division": 1,
+        "name": "관광&엔터테인먼트학부",
+        "recruitment_group": "가군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 12,
+    "fields": {
+        "division": 2,
+        "name": "전자공학부 전자공학과",
+        "recruitment_group": "가군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 13,
+    "fields": {
+        "division": 2,
+        "name": "컴퓨터공학부 컴퓨터공학과",
+        "recruitment_group": "가군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 14,
+    "fields": {
+        "division": 2,
+        "name": "소프트웨어융합학과",
+        "recruitment_group": "가군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 15,
+    "fields": {
+        "division": 2,
+        "name": "기계공학부",
+        "recruitment_group": "나군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 16,
+    "fields": {
+        "division": 2,
+        "name": "산업경영공학과",
+        "recruitment_group": "나군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 17,
+    "fields": {
+        "division": 2,
+        "name": "화학공학과",
+        "recruitment_group": "나군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 18,
+    "fields": {
+        "division": 2,
+        "name": "신소재공학과",
+        "recruitment_group": "나군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 19,
+    "fields": {
+        "division": 2,
+        "name": "건축학과(5년제)",
+        "recruitment_group": "나군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 20,
+    "fields": {
+        "division": 3,
+        "name": "국제통상학과",
+        "recruitment_group": "가군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 21,
+    "fields": {
+        "division": 3,
+        "name": "경영학과",
+        "recruitment_group": "나군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 22,
+    "fields": {
+        "division": 3,
+        "name": "경영정보학과",
+        "recruitment_group": "가군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 23,
+    "fields": {
+        "division": 4,
+        "name": "전자전기공학부",
+        "recruitment_group": "가군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 24,
+    "fields": {
+        "division": 4,
+        "name": "컴퓨터&AI학부",
+        "recruitment_group": "나군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 25,
+    "fields": {
+        "division": 5,
+        "name": "경제학과",
+        "recruitment_group": "나군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 26,
+    "fields": {
+        "division": 5,
+        "name": "경영학부",
+        "recruitment_group": "나군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 27,
+    "fields": {
+        "division": 5,
+        "name": "신문방송학과",
+        "recruitment_group": "나군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 28,
+    "fields": {
+        "division": 5,
+        "name": "미디어&엔터테인먼트학과",
+        "recruitment_group": "나군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 29,
+    "fields": {
+        "division": 6,
+        "name": "전자공학과",
+        "recruitment_group": "나군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 30,
+    "fields": {
+        "division": 6,
+        "name": "컴퓨터공학과",
+        "recruitment_group": "나군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 31,
+    "fields": {
+        "division": 6,
+        "name": "화공생명공학과",
+        "recruitment_group": "나군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 32,
+    "fields": {
+        "division": 6,
+        "name": "기계공학과",
+        "recruitment_group": "나군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 33,
+    "fields": {
+        "division": 6,
+        "name": "인공지능학과",
+        "recruitment_group": "나군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 1,
+    "fields": {
+        "division": 1,
+        "name": "정치외교학과",
+        "recruitment_group": "가군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 2,
+    "fields": {
+        "division": 1,
+        "name": "행정학과",
+        "recruitment_group": "가군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 3,
+    "fields": {
+        "division": 1,
+        "name": "사회학과",
+        "recruitment_group": "가군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 4,
+    "fields": {
+        "division": 1,
+        "name": "경제학과",
+        "recruitment_group": "가군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 5,
+    "fields": {
+        "division": 1,
+        "name": "무역학과",
+        "recruitment_group": "가군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 6,
+    "fields": {
+        "division": 1,
+        "name": "미디어학과",
+        "recruitment_group": "가군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 7,
+    "fields": {
+        "division": 1,
+        "name": "경영학과",
+        "recruitment_group": "가군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 8,
+    "fields": {
+        "division": 1,
+        "name": "회계학과",
+        "recruitment_group": "가군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 9,
+    "fields": {
+        "division": 1,
+        "name": "Hospitality경영학과",
+        "recruitment_group": "가군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 10,
+    "fields": {
+        "division": 1,
+        "name": "조리&푸드디자인학과",
+        "recruitment_group": "가군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 11,
+    "fields": {
+        "division": 1,
+        "name": "관광&엔터테인먼트학부",
+        "recruitment_group": "가군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 12,
+    "fields": {
+        "division": 2,
+        "name": "전자공학부 전자공학과",
+        "recruitment_group": "가군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 13,
+    "fields": {
+        "division": 2,
+        "name": "컴퓨터공학부 컴퓨터공학과",
+        "recruitment_group": "가군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 14,
+    "fields": {
+        "division": 2,
+        "name": "소프트웨어융합학과",
+        "recruitment_group": "가군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 15,
+    "fields": {
+        "division": 2,
+        "name": "기계공학부",
+        "recruitment_group": "나군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 16,
+    "fields": {
+        "division": 2,
+        "name": "산업경영공학과",
+        "recruitment_group": "나군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 17,
+    "fields": {
+        "division": 2,
+        "name": "화학공학과",
+        "recruitment_group": "나군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 18,
+    "fields": {
+        "division": 2,
+        "name": "신소재공학과",
+        "recruitment_group": "나군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 19,
+    "fields": {
+        "division": 2,
+        "name": "건축학과(5년제)",
+        "recruitment_group": "나군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 20,
+    "fields": {
+        "division": 3,
+        "name": "국제통상학과",
+        "recruitment_group": "가군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 21,
+    "fields": {
+        "division": 3,
+        "name": "경영학과",
+        "recruitment_group": "나군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 22,
+    "fields": {
+        "division": 3,
+        "name": "경영정보학과",
+        "recruitment_group": "가군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 23,
+    "fields": {
+        "division": 4,
+        "name": "전자전기공학부",
+        "recruitment_group": "가군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 24,
+    "fields": {
+        "division": 4,
+        "name": "컴퓨터&AI학부",
+        "recruitment_group": "나군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 25,
+    "fields": {
+        "division": 5,
+        "name": "경제학과",
+        "recruitment_group": "나군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 26,
+    "fields": {
+        "division": 5,
+        "name": "경영학부",
+        "recruitment_group": "나군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 27,
+    "fields": {
+        "division": 5,
+        "name": "신문방송학과",
+        "recruitment_group": "나군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 28,
+    "fields": {
+        "division": 5,
+        "name": "미디어&엔터테인먼트학과",
+        "recruitment_group": "나군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 29,
+    "fields": {
+        "division": 6,
+        "name": "전자공학과",
+        "recruitment_group": "나군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 30,
+    "fields": {
+        "division": 6,
+        "name": "컴퓨터공학과",
+        "recruitment_group": "나군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 31,
+    "fields": {
+        "division": 6,
+        "name": "화공생명공학과",
+        "recruitment_group": "나군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 32,
+    "fields": {
+        "division": 6,
+        "name": "기계공학과",
+        "recruitment_group": "나군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+},
+{
+    "model": "universities.universitydepartment",
+    "pk": 33,
+    "fields": {
+        "division": 6,
+        "name": "인공지능학과",
+        "recruitment_group": "나군",
+        "korean_score": null,
+        "math_score": null,
+        "inquiry_score": null,
+        "english_method": null,
+        "english_grade_points": null,
+        "naesin_reflection_score": null,
+        "eligible_standard_departments": []
+    }
+}
+]

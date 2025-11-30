@@ -1,0 +1,369 @@
+[
+{
+    "model": "universities.university",
+    "pk": 1,
+    "fields": {
+        "name": "경희대학교",
+        "logo_image": "university_logos/스크린샷_2025-11-29_100525.png"
+    }
+},
+{
+    "model": "universities.university",
+    "pk": 2,
+    "fields": {
+        "name": "동국대학교",
+        "logo_image": "university_logos/symbol_02.png"
+    }
+},
+{
+    "model": "universities.university",
+    "pk": 3,
+    "fields": {
+        "name": "서강대학교",
+        "logo_image": ""
+    }
+},
+{
+    "model": "universities.university",
+    "pk": 4,
+    "fields": {
+        "name": "세종대학교",
+        "logo_image": ""
+    }
+},
+{
+    "model": "universities.universitydivision",
+    "pk": 1,
+    "fields": {
+        "university": 1,
+        "name": "사회계열",
+        "korean_score": 30.0,
+        "math_score": 30.0,
+        "inquiry_score": 25.0,
+        "english_method": "ADD",
+        "english_grade_points": {
+            "1": 200,
+            "2": 196,
+            "3": 188,
+            "4": 160,
+            "5": 120,
+            "6": 80,
+            "7": 46,
+            "8": 22,
+            "9": 0
+        },
+        "naesin_reflection_score": 0.0,
+        "eligible_standard_departments": [
+            1,
+            2,
+            4,
+            21,
+            22,
+            23,
+            26,
+            27,
+            31,
+            34,
+            37,
+            45
+        ]
+    }
+},
+{
+    "model": "universities.universitydivision",
+    "pk": 2,
+    "fields": {
+        "university": 1,
+        "name": "자연계열",
+        "korean_score": 20.0,
+        "math_score": 35.0,
+        "inquiry_score": 30.0,
+        "english_method": "ADD",
+        "english_grade_points": {
+            "1": 200,
+            "2": 196,
+            "3": 188,
+            "4": 160,
+            "5": 120,
+            "6": 80,
+            "7": 46,
+            "8": 22,
+            "9": 0
+        },
+        "naesin_reflection_score": 0.0,
+        "eligible_standard_departments": [
+            3,
+            5,
+            6,
+            8,
+            9,
+            12,
+            14,
+            15,
+            16,
+            17,
+            28,
+            30,
+            33,
+            36,
+            41
+        ]
+    }
+},
+{
+    "model": "universities.universitydivision",
+    "pk": 3,
+    "fields": {
+        "university": 2,
+        "name": "인문계열",
+        "korean_score": 35.0,
+        "math_score": 25.0,
+        "inquiry_score": 25.0,
+        "english_method": "ADD",
+        "english_grade_points": {
+            "1": 200,
+            "2": 199,
+            "3": 197,
+            "4": 190,
+            "5": 180,
+            "6": 140,
+            "7": 90,
+            "8": 20,
+            "9": 0
+        },
+        "naesin_reflection_score": 0.0,
+        "eligible_standard_departments": [
+            1,
+            2,
+            3,
+            26,
+            27,
+            31,
+            33
+        ]
+    }
+},
+{
+    "model": "universities.universitydivision",
+    "pk": 4,
+    "fields": {
+        "university": 2,
+        "name": "자연계열",
+        "korean_score": 25.0,
+        "math_score": 35.0,
+        "inquiry_score": 25.0,
+        "english_method": "ADD",
+        "english_grade_points": {
+            "1": 200,
+            "2": 199,
+            "3": 197,
+            "4": 190,
+            "5": 180,
+            "6": 140,
+            "7": 90,
+            "8": 20,
+            "9": 0
+        },
+        "naesin_reflection_score": 0.0,
+        "eligible_standard_departments": [
+            3,
+            5,
+            6,
+            8,
+            9,
+            14,
+            15,
+            28,
+            30,
+            33,
+            36,
+            41
+        ]
+    }
+},
+{
+    "model": "universities.universitydivision",
+    "pk": 5,
+    "fields": {
+        "university": 3,
+        "name": "인문계열",
+        "korean_score": 36.7,
+        "math_score": 43.3,
+        "inquiry_score": 20.0,
+        "english_method": "ADD",
+        "english_grade_points": {
+            "1": 100,
+            "2": 99,
+            "3": 98,
+            "4": 97,
+            "5": 96,
+            "6": 95,
+            "7": 94,
+            "8": 93,
+            "9": 92
+        },
+        "naesin_reflection_score": 0.0,
+        "eligible_standard_departments": [
+            1,
+            2,
+            3,
+            4,
+            22,
+            23,
+            26,
+            27,
+            31,
+            33
+        ]
+    }
+},
+{
+    "model": "universities.universitydivision",
+    "pk": 6,
+    "fields": {
+        "university": 3,
+        "name": "자연계열",
+        "korean_score": 36.7,
+        "math_score": 43.3,
+        "inquiry_score": 20.0,
+        "english_method": "ADD",
+        "english_grade_points": {
+            "1": 100,
+            "2": 99,
+            "3": 98,
+            "4": 97,
+            "5": 96,
+            "6": 95,
+            "7": 94,
+            "8": 93,
+            "9": 92
+        },
+        "naesin_reflection_score": 0.0,
+        "eligible_standard_departments": [
+            3,
+            5,
+            6,
+            8,
+            9,
+            12,
+            14,
+            15,
+            16,
+            17,
+            24,
+            25,
+            28,
+            30,
+            33,
+            35,
+            36,
+            39,
+            41
+        ]
+    }
+},
+{
+    "model": "universities.universitydivision",
+    "pk": 7,
+    "fields": {
+        "university": 4,
+        "name": "인문계열",
+        "korean_score": 30.0,
+        "math_score": 30.0,
+        "inquiry_score": 20.0,
+        "english_method": "ADD",
+        "english_grade_points": {
+            "1": 200,
+            "2": 195,
+            "3": 190,
+            "4": 185,
+            "5": 170,
+            "6": 150,
+            "7": 120,
+            "8": 100,
+            "9": 0
+        },
+        "naesin_reflection_score": 0.0,
+        "eligible_standard_departments": [
+            1,
+            2,
+            3,
+            4,
+            7,
+            10,
+            21,
+            22,
+            23,
+            26,
+            27,
+            31,
+            33,
+            34,
+            37,
+            38,
+            45
+        ]
+    }
+},
+{
+    "model": "universities.universitydivision",
+    "pk": 8,
+    "fields": {
+        "university": 4,
+        "name": "자연계열",
+        "korean_score": 20.0,
+        "math_score": 35.0,
+        "inquiry_score": 25.0,
+        "english_method": "ADD",
+        "english_grade_points": {
+            "1": 200,
+            "2": 198,
+            "3": 196,
+            "4": 194,
+            "5": 170,
+            "6": 150,
+            "7": 120,
+            "8": 100,
+            "9": 0
+        },
+        "naesin_reflection_score": 0.0,
+        "eligible_standard_departments": [
+            3,
+            4,
+            5,
+            6,
+            8,
+            9,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            22,
+            24,
+            25,
+            28,
+            29,
+            30,
+            32,
+            33,
+            35,
+            36,
+            37,
+            38,
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            48
+        ]
+    }
+}
+]

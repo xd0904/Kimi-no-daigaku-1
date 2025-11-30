@@ -1,0 +1,530 @@
+[
+{
+    "model": "universities.admissionresult",
+    "pk": 1,
+    "fields": {
+        "department": 1,
+        "year": 2025,
+        "recruit_count": 2,
+        "korean_grade": 2.0,
+        "korean_percentile": 91.0,
+        "math_grade": 5.0,
+        "math_percentile": 56.0,
+        "english_grade": 2.0,
+        "inquiry_grade": 2.0,
+        "inquiry_percentile": 91.0
+    }
+},
+{
+    "model": "universities.admissionresult",
+    "pk": 2,
+    "fields": {
+        "department": 2,
+        "year": 2025,
+        "recruit_count": 2,
+        "korean_grade": 2.0,
+        "korean_percentile": 94.0,
+        "math_grade": 4.0,
+        "math_percentile": 68.0,
+        "english_grade": 3.0,
+        "inquiry_grade": 3.0,
+        "inquiry_percentile": 80.5
+    }
+},
+{
+    "model": "universities.admissionresult",
+    "pk": 3,
+    "fields": {
+        "department": 3,
+        "year": 2025,
+        "recruit_count": 2,
+        "korean_grade": 3.0,
+        "korean_percentile": 82.0,
+        "math_grade": 3.0,
+        "math_percentile": 78.0,
+        "english_grade": 2.0,
+        "inquiry_grade": 4.0,
+        "inquiry_percentile": 74.0
+    }
+},
+{
+    "model": "universities.admissionresult",
+    "pk": 4,
+    "fields": {
+        "department": 4,
+        "year": 2025,
+        "recruit_count": 3,
+        "korean_grade": 4.0,
+        "korean_percentile": 67.0,
+        "math_grade": 2.0,
+        "math_percentile": 91.0,
+        "english_grade": 2.5,
+        "inquiry_grade": 3.0,
+        "inquiry_percentile": 84.5
+    }
+},
+{
+    "model": "universities.admissionresult",
+    "pk": 5,
+    "fields": {
+        "department": 5,
+        "year": 2025,
+        "recruit_count": 3,
+        "korean_grade": 4.0,
+        "korean_percentile": 68.5,
+        "math_grade": 4.0,
+        "math_percentile": 76.0,
+        "english_grade": 3.0,
+        "inquiry_grade": 3.0,
+        "inquiry_percentile": 86.5
+    }
+},
+{
+    "model": "universities.admissionresult",
+    "pk": 6,
+    "fields": {
+        "department": 6,
+        "year": 2025,
+        "recruit_count": 3,
+        "korean_grade": 2.0,
+        "korean_percentile": 91.0,
+        "math_grade": 3.0,
+        "math_percentile": 80.5,
+        "english_grade": 2.5,
+        "inquiry_grade": 3.0,
+        "inquiry_percentile": 81.5
+    }
+},
+{
+    "model": "universities.admissionresult",
+    "pk": 7,
+    "fields": {
+        "department": 7,
+        "year": 2025,
+        "recruit_count": 6,
+        "korean_grade": 3.0,
+        "korean_percentile": 85.25,
+        "math_grade": 3.0,
+        "math_percentile": 77.5,
+        "english_grade": 2.75,
+        "inquiry_grade": 2.0,
+        "inquiry_percentile": 89.13
+    }
+},
+{
+    "model": "universities.admissionresult",
+    "pk": 8,
+    "fields": {
+        "department": 8,
+        "year": 2025,
+        "recruit_count": 3,
+        "korean_grade": 3.0,
+        "korean_percentile": 82.0,
+        "math_grade": 4.0,
+        "math_percentile": 72.0,
+        "english_grade": 2.0,
+        "inquiry_grade": 2.0,
+        "inquiry_percentile": 91.75
+    }
+},
+{
+    "model": "universities.admissionresult",
+    "pk": 9,
+    "fields": {
+        "department": 9,
+        "year": 2025,
+        "recruit_count": 5,
+        "korean_grade": 3.0,
+        "korean_percentile": 86.5,
+        "math_grade": 4.0,
+        "math_percentile": 75.0,
+        "english_grade": 2.75,
+        "inquiry_grade": 2.0,
+        "inquiry_percentile": 89.75
+    }
+},
+{
+    "model": "universities.admissionresult",
+    "pk": 10,
+    "fields": {
+        "department": 10,
+        "year": 2025,
+        "recruit_count": 3,
+        "korean_grade": 3.0,
+        "korean_percentile": 80.0,
+        "math_grade": 4.0,
+        "math_percentile": 74.0,
+        "english_grade": 3.0,
+        "inquiry_grade": 2.0,
+        "inquiry_percentile": 91.5
+    }
+},
+{
+    "model": "universities.admissionresult",
+    "pk": 11,
+    "fields": {
+        "department": 11,
+        "year": 2025,
+        "recruit_count": 3,
+        "korean_grade": 4.0,
+        "korean_percentile": 75.5,
+        "math_grade": 4.0,
+        "math_percentile": 63.5,
+        "english_grade": 3.5,
+        "inquiry_grade": 3.0,
+        "inquiry_percentile": 80.5
+    }
+},
+{
+    "model": "universities.admissionresult",
+    "pk": 12,
+    "fields": {
+        "department": 12,
+        "year": 2025,
+        "recruit_count": 3,
+        "korean_grade": 4.0,
+        "korean_percentile": 71.5,
+        "math_grade": 2.0,
+        "math_percentile": 94.5,
+        "english_grade": 3.0,
+        "inquiry_grade": 3.0,
+        "inquiry_percentile": 84.0
+    }
+},
+{
+    "model": "universities.admissionresult",
+    "pk": 13,
+    "fields": {
+        "department": 13,
+        "year": 2025,
+        "recruit_count": 3,
+        "korean_grade": 3.0,
+        "korean_percentile": 85.0,
+        "math_grade": 3.0,
+        "math_percentile": 86.5,
+        "english_grade": 1.5,
+        "inquiry_grade": 3.0,
+        "inquiry_percentile": 80.0
+    }
+},
+{
+    "model": "universities.admissionresult",
+    "pk": 14,
+    "fields": {
+        "department": 14,
+        "year": 2025,
+        "recruit_count": 3,
+        "korean_grade": 3.0,
+        "korean_percentile": 81.5,
+        "math_grade": 3.0,
+        "math_percentile": 86.5,
+        "english_grade": 2.5,
+        "inquiry_grade": 3.0,
+        "inquiry_percentile": 82.75
+    }
+},
+{
+    "model": "universities.admissionresult",
+    "pk": 15,
+    "fields": {
+        "department": 15,
+        "year": 2025,
+        "recruit_count": 3,
+        "korean_grade": 3.0,
+        "korean_percentile": 84.0,
+        "math_grade": 4.0,
+        "math_percentile": 70.0,
+        "english_grade": 2.5,
+        "inquiry_grade": 2.0,
+        "inquiry_percentile": 93.5
+    }
+},
+{
+    "model": "universities.admissionresult",
+    "pk": 16,
+    "fields": {
+        "department": 16,
+        "year": 2025,
+        "recruit_count": 2,
+        "korean_grade": 3.0,
+        "korean_percentile": 79.0,
+        "math_grade": 4.0,
+        "math_percentile": 66.0,
+        "english_grade": 3.0,
+        "inquiry_grade": 2.0,
+        "inquiry_percentile": 92.5
+    }
+},
+{
+    "model": "universities.admissionresult",
+    "pk": 17,
+    "fields": {
+        "department": 17,
+        "year": 2025,
+        "recruit_count": 2,
+        "korean_grade": 3.0,
+        "korean_percentile": 77.0,
+        "math_grade": 3.0,
+        "math_percentile": 87.0,
+        "english_grade": 2.0,
+        "inquiry_grade": 2.0,
+        "inquiry_percentile": 93.5
+    }
+},
+{
+    "model": "universities.admissionresult",
+    "pk": 18,
+    "fields": {
+        "department": 18,
+        "year": 2025,
+        "recruit_count": 2,
+        "korean_grade": 3.0,
+        "korean_percentile": 85.0,
+        "math_grade": 4.0,
+        "math_percentile": 74.0,
+        "english_grade": 3.0,
+        "inquiry_grade": 2.0,
+        "inquiry_percentile": 93.0
+    }
+},
+{
+    "model": "universities.admissionresult",
+    "pk": 19,
+    "fields": {
+        "department": 19,
+        "year": 2025,
+        "recruit_count": 3,
+        "korean_grade": 3.0,
+        "korean_percentile": 85.0,
+        "math_grade": 4.0,
+        "math_percentile": 74.0,
+        "english_grade": 2.5,
+        "inquiry_grade": 3.0,
+        "inquiry_percentile": 84.0
+    }
+},
+{
+    "model": "universities.admissionresult",
+    "pk": 20,
+    "fields": {
+        "department": 20,
+        "year": 2025,
+        "recruit_count": 2,
+        "korean_grade": 3.0,
+        "korean_percentile": 87.0,
+        "math_grade": 4.0,
+        "math_percentile": 60.0,
+        "english_grade": 3.5,
+        "inquiry_grade": 2.0,
+        "inquiry_percentile": 91.75
+    }
+},
+{
+    "model": "universities.admissionresult",
+    "pk": 21,
+    "fields": {
+        "department": 21,
+        "year": 2025,
+        "recruit_count": 2,
+        "korean_grade": 3.0,
+        "korean_percentile": 88.0,
+        "math_grade": 4.0,
+        "math_percentile": 72.0,
+        "english_grade": 3.0,
+        "inquiry_grade": 2.0,
+        "inquiry_percentile": 95.25
+    }
+},
+{
+    "model": "universities.admissionresult",
+    "pk": 22,
+    "fields": {
+        "department": 22,
+        "year": 2025,
+        "recruit_count": 2,
+        "korean_grade": 2.0,
+        "korean_percentile": 93.0,
+        "math_grade": 5.0,
+        "math_percentile": 58.0,
+        "english_grade": 3.5,
+        "inquiry_grade": 2.0,
+        "inquiry_percentile": 95.5
+    }
+},
+{
+    "model": "universities.admissionresult",
+    "pk": 23,
+    "fields": {
+        "department": 23,
+        "year": 2025,
+        "recruit_count": 2,
+        "korean_grade": 4.0,
+        "korean_percentile": 73.0,
+        "math_grade": 3.0,
+        "math_percentile": 86.0,
+        "english_grade": 2.5,
+        "inquiry_grade": 3.0,
+        "inquiry_percentile": 86.25
+    }
+},
+{
+    "model": "universities.admissionresult",
+    "pk": 24,
+    "fields": {
+        "department": 24,
+        "year": 2025,
+        "recruit_count": 2,
+        "korean_grade": 3.0,
+        "korean_percentile": 87.0,
+        "math_grade": 3.0,
+        "math_percentile": 80.5,
+        "english_grade": 2.5,
+        "inquiry_grade": 2.0,
+        "inquiry_percentile": 92.5
+    }
+},
+{
+    "model": "universities.admissionresult",
+    "pk": 25,
+    "fields": {
+        "department": 25,
+        "year": 2025,
+        "recruit_count": null,
+        "korean_grade": 2.0,
+        "korean_percentile": 91.0,
+        "math_grade": 3.0,
+        "math_percentile": 78.0,
+        "english_grade": 3.0,
+        "inquiry_grade": 1.0,
+        "inquiry_percentile": 98.0
+    }
+},
+{
+    "model": "universities.admissionresult",
+    "pk": 26,
+    "fields": {
+        "department": 26,
+        "year": 2025,
+        "recruit_count": null,
+        "korean_grade": 2.0,
+        "korean_percentile": 91.0,
+        "math_grade": 3.0,
+        "math_percentile": 78.0,
+        "english_grade": 3.0,
+        "inquiry_grade": 1.0,
+        "inquiry_percentile": 98.0
+    }
+},
+{
+    "model": "universities.admissionresult",
+    "pk": 27,
+    "fields": {
+        "department": 27,
+        "year": 2025,
+        "recruit_count": null,
+        "korean_grade": 2.0,
+        "korean_percentile": 91.0,
+        "math_grade": 3.0,
+        "math_percentile": 78.0,
+        "english_grade": 3.0,
+        "inquiry_grade": 1.0,
+        "inquiry_percentile": 98.0
+    }
+},
+{
+    "model": "universities.admissionresult",
+    "pk": 28,
+    "fields": {
+        "department": 28,
+        "year": 2025,
+        "recruit_count": null,
+        "korean_grade": 2.0,
+        "korean_percentile": 91.0,
+        "math_grade": 3.0,
+        "math_percentile": 78.0,
+        "english_grade": 3.0,
+        "inquiry_grade": 1.0,
+        "inquiry_percentile": 98.0
+    }
+},
+{
+    "model": "universities.admissionresult",
+    "pk": 29,
+    "fields": {
+        "department": 29,
+        "year": 2025,
+        "recruit_count": null,
+        "korean_grade": 2.0,
+        "korean_percentile": 91.0,
+        "math_grade": 2.0,
+        "math_percentile": 89.0,
+        "english_grade": 3.0,
+        "inquiry_grade": 2.0,
+        "inquiry_percentile": 92.0
+    }
+},
+{
+    "model": "universities.admissionresult",
+    "pk": 30,
+    "fields": {
+        "department": 30,
+        "year": 2025,
+        "recruit_count": null,
+        "korean_grade": 2.0,
+        "korean_percentile": 91.0,
+        "math_grade": 2.0,
+        "math_percentile": 89.0,
+        "english_grade": 3.0,
+        "inquiry_grade": 2.0,
+        "inquiry_percentile": 92.0
+    }
+},
+{
+    "model": "universities.admissionresult",
+    "pk": 31,
+    "fields": {
+        "department": 31,
+        "year": 2025,
+        "recruit_count": null,
+        "korean_grade": 91.0,
+        "korean_percentile": 2.0,
+        "math_grade": 2.0,
+        "math_percentile": 89.0,
+        "english_grade": 3.0,
+        "inquiry_grade": 2.0,
+        "inquiry_percentile": 92.0
+    }
+},
+{
+    "model": "universities.admissionresult",
+    "pk": 32,
+    "fields": {
+        "department": 32,
+        "year": 2025,
+        "recruit_count": null,
+        "korean_grade": 2.0,
+        "korean_percentile": 91.0,
+        "math_grade": 2.0,
+        "math_percentile": 89.0,
+        "english_grade": 3.0,
+        "inquiry_grade": 2.0,
+        "inquiry_percentile": 92.0
+    }
+},
+{
+    "model": "universities.admissionresult",
+    "pk": 33,
+    "fields": {
+        "department": 33,
+        "year": 2025,
+        "recruit_count": null,
+        "korean_grade": 2.0,
+        "korean_percentile": 91.0,
+        "math_grade": 2.0,
+        "math_percentile": 89.0,
+        "english_grade": 3.0,
+        "inquiry_grade": 2.0,
+        "inquiry_percentile": 92.0
+    }
+}
+]
