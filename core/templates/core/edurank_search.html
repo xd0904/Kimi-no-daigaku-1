@@ -4,11 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EduRank - 특성화고 입시 정보</title>
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Chart.js CDN (데이터 시각화 라이브러리) -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <!-- Inter 폰트 (Tailwind 기본 폰트와 유사) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
@@ -25,37 +22,30 @@
 <body class="bg-gray-50">
 
     <div class="container mx-auto p-4 md:p-8 max-w-7xl">
-        <!-- 헤더 및 검색바 -->
         <header class="mb-8 bg-white p-6 rounded-2xl shadow-sm border border-gray-200">
             <h1 class="text-3xl font-bold text-blue-700">특성화고 특별전형 입시 정보</h1>
             <p class="text-gray-600 mt-1">조회하고 싶은 대학이나 학과를 검색해 보세요.</p>
             
-            <!-- 검색 폼 -->
             <form id="searchForm" class="flex flex-col sm:flex-row gap-3 mt-6">
                 <input type="text" id="universitySearch" class="form-input w-full sm:w-1/3 p-3 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500" placeholder="대학명 (예: 서울대학교)">
                 <input type="text" id="departmentSearch" class="form-input w-full sm:w-1/3 p-3 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500" placeholder="학과명 (예: 컴퓨터공학과)">
-                <button type="submit" class="bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 w-full sm:w-auto">
+                <button type="submit" id="searchButton" class="bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 w-full sm:w-auto">
                     검색
                 </button>
             </form>
         </header>
 
-        <!-- 컨텐츠 영역 (검색 결과 + 시각화) -->
         <main class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            <!-- 1. 검색 결과 리스트 -->
             <section class="lg:col-span-2 space-y-6">
                 <h2 class="text-2xl font-semibold text-gray-800">검색 결과</h2>
                 <div id="resultsContainer" class="space-y-6">
-                    <!-- 검색 결과가 여기에 동적으로 추가됩니다 -->
-                </div>
-                <!-- 검색 결과 없음 메시지 -->
+                    </div>
                 <div id="noResultsMessage" class="no-results text-center bg-white p-10 rounded-lg shadow-sm border border-gray-200">
                     <p class="text-gray-500 text-lg">검색 결과가 없습니다.</p>
-                    <p class="text-gray-400 mt-2">다른 검색어를 입력해 보세요.</p>
+                    <p class="text-gray-400 mt-2">대학명이나 학과명을 입력하고 검색해 보세요.</p>
                 </div>
             </section>
 
-            <!-- 2. 데이터 시각화 -->
             <aside class="lg:col-span-1 space-y-6">
                 <section class="bg-white p-6 rounded-2xl shadow-sm border border-gray-200 sticky top-8">
                     <h2 class="text-2xl font-semibold text-gray-800 mb-4">입결 데이터 시각화</h2>
@@ -67,9 +57,8 @@
     </div>
 
     <script>
-        // --- Mock Data (API 응답 시뮬레이션) ---
-        // 친구분이 Django REST API를 완성하면, 이 mockData 대신 fetch()를 사용해 실제 데이터를 받아오면 됩니다.
-                const mockData = [
+        // --- Mock Data (API 응답 시뮬레이션 - API 실패 시 임시 사용) ---
+        const mockData = [
             {
                 "id": 1,
                 "university": "서울대학교",
@@ -130,7 +119,7 @@
                 "department": "기계공학과",
                 "recruitment_group": "가군",
                 "standards": ["기준학과 1 (기계)"],
-                 "scoring": {
+                "scoring": {
                     "korean": 200, "math": 300, "inquiry": 200,
                     "english_method": "가산점",
                     "english_table": "1등급: 100, 2등급: 95",
@@ -144,7 +133,7 @@
                         "english_grade": 2,
                         "inquiry_grade": 2.3, "inquiry_percentile": 93
                     },
-                     {
+                    {
                         "year": 2023, "quota": 2,
                         "korean_grade": 2.2, "korean_percentile": 93,
                         "math_grade": 2.0, "math_percentile": 95,
@@ -162,6 +151,7 @@
         const resultsContainer = document.getElementById('resultsContainer');
         const noResultsMessage = document.getElementById('noResultsMessage');
         const chartCanvas = document.getElementById('admissionChart');
+        const searchButton = document.getElementById('searchButton');
         let admissionChart = null; // 차트 객체를 저장할 변수
 
         // --- 이벤트 리스너 ---
@@ -172,21 +162,22 @@
 
         // --- 함수 정의 ---
 
-        // 1. 검색 처리 함수 (API 호출 방식으로 변경)
+        // 1. 검색 처리 함수 (API 호출 방식으로 개선)
         async function handleSearch() {
             const univQuery = universityInput.value.trim();
             const deptQuery = departmentInput.value.trim();
             let allData = [];
 
-            // TODO: 친구가 만든 API 엔드포인트 URL로 교체해야 합니다. (예: '/api/departments/')
-            // 이 경로는 친구분이 Django의 urls.py에서 설정할 API 주소입니다.
+            // 검색 버튼 비활성화 및 텍스트 변경 (로딩 표시)
+            searchButton.disabled = true;
+            searchButton.textContent = '검색 중...';
+
+            // TODO: 친구가 만든 API 엔드포인트 URL로 교체해야 합니다. 
             const API_ENDPOINT = '/api/departments/'; 
             
-            // 쿼리 스트링으로 검색어를 전달합니다.
             const url = `${API_ENDPOINT}?university=${encodeURIComponent(univQuery)}&department=${encodeURIComponent(deptQuery)}`;
 
             try {
-                // 실제 API 호출 부분 (데이터를 가져올 때까지 기다립니다)
                 const response = await fetch(url);
 
                 if (!response.ok) {
@@ -194,24 +185,31 @@
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
 
-                // 응답을 JSON 형식으로 변환합니다.
                 allData = await response.json();
                 
             } catch (error) {
                 console.error("API 호출 중 오류 발생. 임시 Mock Data를 사용합니다:", error);
+                
                 // API 서버 연결 실패 시, mockData에서 검색어에 맞는 데이터를 필터링하여 사용합니다.
                 allData = mockData.filter(item => {
+                    // 검색어가 비어 있으면 모든 데이터를 반환합니다.
+                    if (!univQuery && !deptQuery) return true;
+                    
                     const univMatch = item.university.includes(univQuery);
                     const deptMatch = item.department.includes(deptQuery);
                     return univMatch && deptMatch;
                 });
-            }
+            } finally {
+                // 검색 버튼 재활성화 및 텍스트 복구
+                searchButton.disabled = false;
+                searchButton.textContent = '검색';
 
-            displayResults(allData);
-            updateChart(allData);
+                displayResults(allData);
+                updateChart(allData);
+            }
         }
 
-        // 2. 검색 결과 표시 함수
+        // 2. 검색 결과 표시 함수 (기존 로직 유지)
         function displayResults(data) {
             resultsContainer.innerHTML = ''; // 이전 결과 초기화
 
@@ -272,7 +270,7 @@
             });
         }
 
-        // 3. 차트 업데이트 함수 (데이터 시각화 담당)
+        // 3. 차트 업데이트 함수 (기존 로직 유지)
         function updateChart(data) {
             if (admissionChart) {
                 admissionChart.destroy(); // 이전 차트 파괴
@@ -280,16 +278,22 @@
 
             // 시각화를 위한 데이터 가공
             const labels = data.map(item => `${item.university.split('대')[0]} ${item.department}`);
-            // 최근 2개년치 데이터 (2024, 2023)
             const percentileData2024 = data.map(item => {
                 const result2024 = item.results.find(r => r.year === 2024);
-                // 국어, 수학, 탐구 백분위의 평균 계산
                 return result2024 ? (result2024.korean_percentile + result2024.math_percentile + result2024.inquiry_percentile) / 3 : null;
             });
             const percentileData2023 = data.map(item => {
                 const result2023 = item.results.find(r => r.year === 2023);
                 return result2023 ? (result2023.korean_percentile + result2023.math_percentile + result2023.inquiry_percentile) / 3 : null;
             });
+
+            // 데이터가 없는 경우 차트 생성 방지 및 메시지 표시 (선택적)
+            if (labels.length === 0) {
+                 chartCanvas.style.display = 'none';
+                 // 여기에 '데이터가 없습니다' 메시지를 표시할 수 있습니다.
+                 return;
+            }
+            chartCanvas.style.display = 'block';
 
             admissionChart = new Chart(chartCanvas, {
                 type: 'bar', // 막대 차트
@@ -330,8 +334,7 @@
                     },
                     scales: {
                         y: {
-                            beginAtZero: false, // 0부터 시작 안 함 (데이터가 90~100 사이일 경우)
-                            // 차트 y축의 최소값을 데이터 최소값보다 2 낮게 설정하여 차트가 더 잘 보이도록 조정
+                            beginAtZero: false, 
                             min: Math.min(...percentileData2023.filter(v => v), ...percentileData2024.filter(v => v)) - 2, 
                             max: 100, // 최대값 100
                             title: {
@@ -343,10 +346,17 @@
                 }
             });
         }
+        
+        // 4. 초기 화면 설정 함수 (추가됨)
+        function initializeDisplay() {
+            resultsContainer.innerHTML = '';
+            noResultsMessage.style.display = 'block'; // 초기에는 '검색 결과가 없습니다' 메시지 표시
+            updateChart([]); // 차트 초기화 (빈 데이터로)
+        }
 
         // --- 초기 로드 ---
-        // 페이지 로드 시 검색 함수를 실행하여 초기 화면에 데이터를 표시합니다.
-        handleSearch();
+        // 페이지 로드 시 바로 검색을 실행하는 대신 초기화 함수를 호출합니다.
+        initializeDisplay(); 
     </script>
 
 </body>
